@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>demo-baiduSlide</title>
+    <meta name="viewport" contant="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="lib/vue.js"></script>
+    <script src="lib/vue-resource.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" v-cloak>
+       <input type="text" v-model="keyWord" @keyup="get">
+       <ul>
+           <li v-for="(item, index) in listData">
+                {{index}}
+           </li>
+       </ul>
+       <p v-show="listData.length==0">暂无数据...</p>
+    </div>
+</body>
+<script>
+    window.onload=function(){
+        new Vue({
+            el: '#box',
+            data: function () {
+                return {
+                    keyWord: '',
+                    listData: []
+                }
+            },
+            methods: {
+                get () {
+                    // this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',{
+                    //     wd: this.keyWord
+                    // },{
+                    //     jsonp: 'cb'
+                    // }).then((res) => {
+                    //     console.log(res.data)
+                    // }, (err) => {
+                    //     console.log(err)
+                    // })
+
+                     this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',{
+                            wd:this.keyWord
+                        },{
+                            jsonp:'cb'
+                        }).then(function(res){
+                            console.log(res.data)
+                            this.myData=res.data.s;
+                        },function(){
+                            
+                        });
+                }
+            }
+        })
+    }
+    
+</script>
+</html>
