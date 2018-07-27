@@ -27,7 +27,7 @@
     </div>
 </body>
 <script src="lib/vue.js"></script>
-<script src="lib/vue-resource1.js"></script>
+<script src="lib/vue-resource.js"></script>
 <script>
     window.onload=function(){
         new Vue({
@@ -49,9 +49,10 @@
                         this.keyWord = ''
                     }
                     this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',{
-                        wd: this.keyWord
-                    },{
-                        jsonp: 'cb'
+                        params: {
+                            wd: this.keyWord
+                        },
+                        jsonp: 'cb',
                     }).then((res) => {
                         this.listData = res.data.s
                     }, (err) => {
