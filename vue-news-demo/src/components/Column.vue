@@ -1,5 +1,5 @@
 <template>
-  <div class="foot-btn">
+  <div class="">
     column
   </div>
 </template>

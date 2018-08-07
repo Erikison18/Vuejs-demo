@@ -4,8 +4,10 @@ import './assets/js/font'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Loading from './components/loading'
 
 Vue.config.productionTip = false
+Vue.use(Loading)
 
 /* eslint-disable no-new */
 new Vue({

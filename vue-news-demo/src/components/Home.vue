@@ -1,5 +1,5 @@
 <template>
-  <div class="foot-btn">
-    home
+  <div class="content">
+    <Loading></Loading>
   </div>
 </template>

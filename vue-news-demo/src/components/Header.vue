@@ -1,9 +1,9 @@
 <template>
     <div class="nav">
         <ul>
-            <router-link tag="li" to="/home"><a href="javascripts:;">首页</a></router-link>
-            <router-link tag="li" to="/follow"><a href="javascripts:;">关注</a></router-link>
-            <router-link tag="li" to="/column"><a href="javascripts:;">栏目</a></router-link>
+            <router-link tag="li" to="/home" active-class="active"><a href="javascripts:;">首页</a></router-link>
+            <router-link tag="li" to="/follow" active-class="active"><a href="javascripts:;">关注</a></router-link>
+            <router-link tag="li" to="/column" active-class="active"><a href="javascripts:;">栏目</a></router-link>
         </ul>
     </div>
 </template>
@@ -37,6 +37,11 @@ export default {
                 font-size: 0.3rem;
                 color: #9e9a95;
             }
+        }
+        .active a{
+            height: 50px;
+            border-bottom: 10px solid #5477b2;
+            color: #5477b2;
         }
     }
 }

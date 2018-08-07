@@ -8,7 +8,7 @@ import UserInfo from '../components/UserInfo.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: "history",
+  mode: 'history',
   routes: [
     {
       path: '/home',
