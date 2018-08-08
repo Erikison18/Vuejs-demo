@@ -1,25 +1,3 @@
-<template>
-  <div class="foot-btn">
-    <ul>
-      <li class="home">
-        <a href="javascript:;"></a>
-      </li>
-      <li class="write">
-        <a href="javascript:;"></a>
-      </li>
-      <li class="my">
-        <a href="javascript:;"></a>
-      </li>
-    </ul>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'v-footer'
-}
-</script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .foot-btn{
@@ -36,6 +14,11 @@ export default {
     margin: 0 auto;
     li{
       float: left;
+      a{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
     }
     .home{
       width: 44px;
@@ -62,3 +45,19 @@ export default {
   }
 }
 </style>
+
+<template>
+  <div class="foot-btn">
+    <ul>
+      <router-link tag="li" to="/home" class="home"><a href="javascripts:;"></a></router-link>
+      <router-link tag="li" to="/follow" class="write"><a href="javascripts:;"></a></router-link>
+      <router-link tag="li" to="/userinfo" class="my"><a href="javascripts:;"></a></router-link>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'v-footer'
+}
+</script>
