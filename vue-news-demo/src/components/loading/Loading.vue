@@ -24,6 +24,8 @@
   z-index: 1000;
   width: 100%;
   height: 90px;
+  top: 45%;
+  left: 0;
 }
 .zns-loading-inner {
   display: flex;

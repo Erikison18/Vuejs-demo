@@ -1,10 +1,13 @@
 import {
   HEAD_SHOW_SUCCESS,
-  HEAD_SHOW_FAIL
+  HEAD_SHOW_FAIL,
+  SHOW_LOADING,
+  HIDE_LOADING
 } from './type'
 
 const state = {
-  headShow1: true
+  headShow1: true,
+  showLoading: false
 }
 
 const mutations = {
@@ -13,12 +16,21 @@ const mutations = {
   },
   [HEAD_SHOW_FAIL] (state) {
     state.headShow1 = false
+  },
+  [SHOW_LOADING] (state) {
+    state.showLoading = true
+  },
+  [HIDE_LOADING] (state) {
+    state.showLoading = false
   }
 }
 
 const getters = {
   headShow2 (state) {
     return state.headShow1
+  },
+  isLoad () {
+    return state.showLoading
   }
 }
 

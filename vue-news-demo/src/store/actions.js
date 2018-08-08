@@ -7,5 +7,12 @@ export default {
   },
   SHOW_HEAD_FAIL: ({commit}) => {
     commit(types.HEAD_SHOW_FAIL)
+  },
+  // loading组件
+  'showLoading': ({commit}) => {
+    commit(types.SHOW_LOADING)
+  },
+  'hideLoading': ({commit}) => {
+    commit(types.HIDE_LOADING)
   }
 }

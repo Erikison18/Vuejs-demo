@@ -8,6 +8,7 @@
     <v-header v-show="headShow2"></v-header>
     <router-view></router-view>
     <v-footer></v-footer>
+    <Loading v-if="isLoad"></Loading>
   </div>
 </template>
 
@@ -23,7 +24,8 @@ export default {
     'v-footer': Footer
   },
   computed: mapGetters([
-    'headShow2'
+    'headShow2',
+    'isLoad'
   ]),
   mouted () {
     console.log(this.$route)
@@ -41,7 +43,6 @@ export default {
     headerChange (path) {
       if (path === 'userinfo') {
         this.$store.dispatch('SHOW_HEAD_FAIL')
-        console.log(999)
       } else {
         this.$store.dispatch('SHOW_HEAD_SUCC')
       }

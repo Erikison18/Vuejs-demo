@@ -4,6 +4,7 @@ import Home from '../components/Home.vue'
 import Follow from '../components/Follow.vue'
 import Column from '../components/Column.vue'
 import UserInfo from '../components/UserInfo.vue'
+import Article from '../components/Article'
 
 Vue.use(Router)
 
@@ -25,6 +26,10 @@ export default new Router({
     {
       path: '/userinfo',
       component: UserInfo
+    },
+    {
+      path: '/acticle/:id',
+      component: Article
     },
     {
       path: '*',

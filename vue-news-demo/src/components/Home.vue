@@ -4,10 +4,10 @@
     <div class="newsList">
       <ul>
         <li v-for="(item, index) in dataList" :key="index">
-          <a :href="item.id">
+          <router-link :to="'/acticle/'+item.id">
             <h2>{{index + 1}}.{{item.title}}</h2>
             <p>{{item.detail}}</p>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
