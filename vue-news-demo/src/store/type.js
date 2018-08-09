@@ -3,3 +3,6 @@ export const HEAD_SHOW_FAIL = 'HEAD_SHOW_FAIL'
 
 export const SHOW_LOADING = 'SHOW_LOADING'
 export const HIDE_LOADING = 'HIDE_LOADING'
+
+export const FOOT_SHOW_SUCCESS = 'FOOT_SHOW_SUCCESS'
+export const FOOT_SHOW_FAIL = 'FOOT_SHOW_FAIL'

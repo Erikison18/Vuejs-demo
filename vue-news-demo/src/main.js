@@ -6,9 +6,15 @@ import router from './router'
 import store from './store/store'
 import axios from 'axios'
 import Loading from './components/loading'
+import filters from './filter/index'
 
 Vue.config.productionTip = false
 Vue.use(Loading)
+
+// 注册fliter过滤器
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 
 // axios的一些配置，比如发送请求显示loading，请求回来loading消失之类的
 axios.interceptors.request.use(function (config) {

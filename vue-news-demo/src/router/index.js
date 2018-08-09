@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../components/Home.vue'
-import Follow from '../components/Follow.vue'
-import Column from '../components/Column.vue'
-import UserInfo from '../components/UserInfo.vue'
-import Article from '../components/Article'
+import Home from '../components/pages/Home.vue'
+import Follow from '../components/pages/Follow.vue'
+import Column from '../components/pages/Column.vue'
+import UserInfo from '../components/pages/UserInfo.vue'
+import Article from '../components/pages/Article'
+import Login from '../components/pages/Login.vue'
+import Register from '../components/pages/Register.vue'
 
 Vue.use(Router)
 
@@ -28,7 +30,15 @@ export default new Router({
       component: UserInfo
     },
     {
-      path: '/acticle/:id',
+      path: '/login',
+      component: Login
+    },
+    {
+      path: '/register',
+      component: Register
+    },
+    {
+      path: '/acticle:id',
       component: Article
     },
     {

@@ -2,12 +2,15 @@ import {
   HEAD_SHOW_SUCCESS,
   HEAD_SHOW_FAIL,
   SHOW_LOADING,
-  HIDE_LOADING
+  HIDE_LOADING,
+  FOOT_SHOW_SUCCESS,
+  FOOT_SHOW_FAIL
 } from './type'
 
 const state = {
   headShow1: true,
-  showLoading: false
+  showLoading: false,
+  footShow: true
 }
 
 const mutations = {
@@ -22,6 +25,12 @@ const mutations = {
   },
   [HIDE_LOADING] (state) {
     state.showLoading = false
+  },
+  [FOOT_SHOW_SUCCESS] (state) {
+    state.footShow = true
+  },
+  [FOOT_SHOW_FAIL] (state) {
+    state.footShow = false
   }
 }
 
@@ -31,6 +40,9 @@ const getters = {
   },
   isLoad () {
     return state.showLoading
+  },
+  footShow () {
+    return state.footShow
   }
 }
 

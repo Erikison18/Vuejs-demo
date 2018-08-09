@@ -14,5 +14,12 @@ export default {
   },
   'hideLoading': ({commit}) => {
     commit(types.HIDE_LOADING)
+  },
+  // 底部组件
+  SHOW_FOOT_SUCC: ({commit}) => {
+    commit(types.FOOT_SHOW_SUCCESS)
+  },
+  SHOW_FOOT_FAIL: ({commit}) => {
+    commit(types.FOOT_SHOW_FAIL)
   }
 }

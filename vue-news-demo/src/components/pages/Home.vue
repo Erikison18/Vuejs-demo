@@ -4,7 +4,7 @@
     <div class="newsList">
       <ul>
         <li v-for="(item, index) in dataList" :key="index">
-          <router-link :to="'/acticle/'+item.id">
+          <router-link :to="'/acticle'+item.id">
             <h2>{{index + 1}}.{{item.title}}</h2>
             <p>{{item.detail}}</p>
           </router-link>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Slide from './Slide'
+import Slide from '../Slide'
 export default {
   components: {
     Slide
